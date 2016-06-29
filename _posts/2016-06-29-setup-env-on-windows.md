@@ -1,3 +1,10 @@
+---
+layout: post
+title: "Setup development environment on Windows 7 碎碎念"
+date: 2016-06-29 23:58:00 +0800
+---
+
+
 # Setup development environment on Windows 7 碎碎念
 
 自从有了mac，我的windows本早已沦为游戏机。鉴于这次只带了windows小本回国，于是只好开始在windows电脑上配置开发环境。
