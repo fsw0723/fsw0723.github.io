@@ -2,6 +2,7 @@
 layout: post
 title: "Setup development environment on Windows 7 碎碎念"
 date: 2016-06-29 23:58:00 +0800
+categories: others
 ---
 
 

@@ -1,33 +1,50 @@
-# Jekyll configuration
-
-name: My blog 自留地
+title: Shuwei's blog 自留地
 description: Shuwei's personal blog
+author: Fang Shuwei
+logo: http://aboutashu.com/hcz-jekyll-blog/static/img/avatar.png
+github: https://github.com/fsw0723
+about:
+disqus_shortname: fsw0723
+google_analytics:
+urls:
+    - text: Home
+      url: /
+      icon: fa-home
+      layout: post
+    - text: About
+      url: /about/
+      icon: fa-comments
+    - text: Resume
+      url: '/resume'
+      icon: fa-graduation-cap
+    - text: Github
+      url: https://github.com/fsw0723
+      icon: fa-github
+    - text: RSS
+      url: /feed.xml
+      icon: fa-feed
+      target: _blank
+      
+social:
+    - icon: fa-facebook
+      link: 'https://www.facebook.com/shuweifang'
+    - icon: fa-linkedin
+      link: 'https://www.linkedin.com/in/shuwei-fang-b61aaa69'
 
-# url is currently only used only for the RSS feed in feed.xml
-url: http://fsw0723.github.io
+share:
+  twitter_username: \#
+  fb_appid: 000000000000
 
-# baseurl will often be '', but for a project page on gh-pages, it needs to
-# be the project name.
-# *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
-#     run it like so: jekyll serve --baseurl=''
-baseurl: ''
 
-# This can be '' to hide the Github nav button
-github: 'https://github.com/fsw0723'
+enableTags: true
+tagarray: []
 
-# Set this to your UA-# value, or '' to disable the block completely
-gaaccount: ''
-
-# Set this to your disqus shortname to enable comments. Note that the 'comments'
-# setting below must also be true. Individual posts can override 'comments' to
-# disable on a post-by-post basis
-disqus: ''
-comments: true
-
-permalink: /:year/:month/:title
-paginate: 3
-
-highlighter: rouge
+url: "http://localhost:4000"
+baseurl: ""
+paginate: 20
+per_page: 20
+paginate_path: "/page:num/"
 markdown: kramdown
-
-exclude: ['README.md', 'LICENSE']
+gems:
+  - jekyll-paginate
+  - jekyll-gist
