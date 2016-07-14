@@ -39,7 +39,7 @@ share:
 enableTags: true
 tagarray: []
 
-url: "http://localhost:4000"
+url: "http://fsw0723.github.io"
 baseurl: ""
 paginate: 20
 per_page: 20
