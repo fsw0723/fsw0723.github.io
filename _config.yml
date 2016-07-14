@@ -17,9 +17,6 @@ urls:
     - text: Resume
       url: '/resume'
       icon: fa-graduation-cap
-    - text: Github
-      url: https://github.com/fsw0723
-      icon: fa-github
     - text: RSS
       url: /feed.xml
       icon: fa-feed
@@ -30,6 +27,8 @@ social:
       link: 'https://www.facebook.com/shuweifang'
     - icon: fa-linkedin
       link: 'https://www.linkedin.com/in/shuwei-fang-b61aaa69'
+    - icon: fa-github
+      link: 'https://www.github.com/fsw0723'
 
 share:
   twitter_username: \#
