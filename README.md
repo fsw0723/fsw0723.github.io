@@ -19,3 +19,7 @@ This is a simple personal material theme, best suited for personal authors, prog
 #### Screenshot
 
 ![Screenshot Home Page](https://raw.githubusercontent.com/ashutosh2k12/jekyllthemes/master/thumbnails/hcz-material.png  "Screenshot Home Page")
+
+
+#### Running the app locally
+bundle exec jekyll serve
