@@ -85,6 +85,9 @@ p {
 .sidebar-wrapper .profile {
   margin-bottom: 15px;
 }
+.profile {
+  max-width: 80%;
+}
 .sidebar-wrapper .contact-list .fa {
   margin-right: 5px;
   font-size: 18px;
