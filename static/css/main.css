@@ -174,3 +174,7 @@ footer {
 .pager li.active a {
     background: rgba(89, 148, 129, 0.3);
 }
+
+img[alt=star] {
+    display: inline-block;
+}

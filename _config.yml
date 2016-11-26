@@ -1,7 +1,7 @@
 title: Shuwei's blog 自留地
 description: Shuwei's personal blog
 author: Fang Shuwei
-logo: http://aboutashu.com/hcz-jekyll-blog/static/img/avatar.png
+logo: /static/img/avatar.png
 github: https://github.com/fsw0723
 about:
 disqus_shortname: fsw0723
