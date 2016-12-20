@@ -154,7 +154,7 @@ Assignment是找个公司做case study，从几个方面分析公司能如何变
 之前这门课只有一个40页report加期末presentation，于是很多人都翘课不上。到了这学期老师突然改了风格，每节课随机考quiz逼大家出席，还加了一个和上课内容有关的individual assignment。
 presentation被取消，40页的report还是要写。每周还会发出peer review的link，如果不填那周的平时成绩就拿不到了。。。
 
-到最后这门课具体讲了啥我还是没有印象 o_O||
+到最后这门课具体讲了啥我还是没有印象 o_O|| 好在给分不错！
 
  难度 ![star][star] ![star][star] 
  
@@ -170,7 +170,7 @@ presentation被取消，40页的report还是要写。每周还会发出peer revi
 Assignment任务相当重，需要用mongoDB和Cassandra两种DB做出一个wholesale supplier system，数据量几个G，每个组3个人会分到3个学校的node供测试用。
 所幸另一门课比较水+队友给力（TWer的水平果然是值得信赖的），避免的通宵的悲剧。不过通过Assignment可以对这两个db有比较全面的理解。
 
-Individual assignment和final都不算难（也许是因为课讲的很清楚），希望能拿到一个好分数！
+Individual assignment和final都不算难（也许是因为课讲的很清楚），希望能拿到一个好分数！(PS：最后拿了B+，只能说not bad...)
 
  难度 ![star][star] ![star][star] ![star][star] 
  
