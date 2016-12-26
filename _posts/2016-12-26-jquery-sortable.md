@@ -2,7 +2,7 @@
 layout: post
 title: "jQuery sortable with responsive UI and touch device support"
 date: 2016-12-26 21:58:00 +0800
-categories: frond-end
+categories: front-end
 ---
 
 I need to build a image previewer as part of an web app which allows drag and drop for sorting. 
