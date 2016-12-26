@@ -2,7 +2,7 @@
 layout: post
 title: "Work around CSS styling for IE8"
 date: 2016-12-03 20:33:00 +0800
-categories: frond-end
+categories: front-end
 ---
 
 # Work around CSS styling for IE8
