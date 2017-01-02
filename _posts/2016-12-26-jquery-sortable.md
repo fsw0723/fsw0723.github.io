@@ -16,6 +16,10 @@ I have tried a few available solutions:
 It works perfect on desktop and supports VueJS.
 However on touch devices, the background moves while dragging, which brings a terrible user experience.
 
+Update: This is a bug for ios10, [reference](https://github.com/RubaXa/Sortable/issues/973).
+
+To fix this issue, add event listener for touchmove event.
+
 Demo: [http://rubaxa.github.io/Sortable/](http://rubaxa.github.io/Sortable/)
 
 * **touch-dnd**
@@ -115,7 +119,30 @@ stop: function(event,ui){
 {% endhighlight %}
 
 With the above configuration, it looks good now! 
+
+Update1: Another option is clone the current element to be the placeholder.
+
+{% highlight javascript %}
+ui.placeholder.html(ui.item.html());
+{% endhighlight %}
+
+{% highlight css %}
+.ui-state-highlight {
+    opacity: 0.3;
+}
+{% endhighlight %}
+
+Update2: There is a problem when integrating with VueJS and trying to update the original image list order using
+
+{% highlight javascript %}
+this.photos.splice(endingIndex, 0, this.photos.splice(startingIndex, 1)[0]);
+{% endhighlight %}
+
+The DOM element order won't be changed after adding the above list re-ordering into **stop** callback.
+
+
 <br /><br /><br />
+
 
 [Demo](http://htmlpreview.github.io/?https://raw.githubusercontent.com/fsw0723/jquery-sortable-responsive/master/index.html)
 
