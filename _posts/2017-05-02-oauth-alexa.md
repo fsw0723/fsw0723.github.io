@@ -23,7 +23,7 @@ As we need to allow individual users to access their personal information, user 
 Thus Alexa account linking is using 3-legged OAuth flow. 
 A typical 3-legged OAuth flow is as follows.
 
-(picture here...)
+![3-legged Oauth flow](/assets/oauth/oauth1.png){:class="img-responsive"}
 
 Alexa supports two types of OAuth authorization grants: implicit grant & authorization code grant. 
 Authorization code grant is suggested and it is able to refresh access token upon expiration.
@@ -52,7 +52,62 @@ With all the setup above, when user request an account linking, Alexa will:
 4. Access token URI will respond with access token, refresh token, expires and some additional information back to Alexa. 
 Account linking can now be successful.
 
-To be continued...
+I mentioned this as the easiest one as it can be done by configuration only, 
+since the request and response format for both Alexa and Amazon side can be matched.
+
+However, in a lot cases, Alexa and authorization server's requests & responses format cannot match,
+this is when middleware is needed. The new flow will look like below (top to bottom):
+
+![Auth code grant with middleware](/assets/oauth/oauth2.png){:class="img-responsive"}
+
+In details, when account linking starts, it will:
+
+1. Alexa calls **Authorization URL**, which is under middleware server, 
+passing state, client_id, redirect_uri and other parameters that are defined in the configuration.
+2. Middleware gets the request, saves redirect_uri & state(if not available in the authorization response),
+and redirect to authorization server withe client_id.
+3. After user grants access, authorization server returns authorization code.
+The redirect url for authorization server now is pointing to middleware server.
+Middleware gets the authorization code and pass back to Alexa with code & state as parameter.
+4. Alexa will send out another request to **Accesss Token URI**, which is again point to middleware here.
+5. Middleware parse the request to the format that authorization server requires and redirect to authorization server.
+6. Once authorization success, the server will return access token & refresh token in standard OAuth2 format.
+ Alexa will show the success message once it receives the access token.
+ 
+## Implicit grant
+
+ 
+![Implicit grant with middleware](/assets/oauth/oauth3.png){:class="img-responsive"}
+
+For implicit grant, the first part of getting authorization code is the same as Auth code grant.
+
+After authorization code is returned to middleware from authorization server, 
+the middleware will fetch access token directly instead of returning back to Alexa.
+From this stage, the process is:
+
+1. Middleware construct request to get access token, with the authorization code.
+2. Authorization server responses with access token.
+3. Using **Redirect URI**, access token and state, middleware redirects back to Alexa.
+The redirect url will be something like this: 
+```
+https://pitangui.amazon.com/spa/skill/account-linking-status.html?vendorId=AAAAAAAAAAAAAA#state=xyz&access_token=2YotnFZFEjr1zCsicMWpAA&token_type=Bearer
+```
+
+Note that you must pass back parameters including *state*, *access_token* and *token_type* are in the URL fragment portion of the URL. This portion is appended to redirect uri using hashtag (#).
+
+
+### PS:
+
+I tried to use the redirect URI provided on Alexa skill configuration page but always gets an empty page after the redirection with access token.
+Not sure what is the reason. It works after using the redirect uri provided when Alexa calls authorization url.
+
+Feedback welcome.
+
+ 
+ 
+ 
+
+    
 
 
 

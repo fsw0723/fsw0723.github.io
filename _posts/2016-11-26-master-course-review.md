@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "NUS Master in Information System course review course review"
+title: "NUS Master in Information System course review"
 date: 2016-11-26 18:52:00 +0800
 categories: others
 ---
