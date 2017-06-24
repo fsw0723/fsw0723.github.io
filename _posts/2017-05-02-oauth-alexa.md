@@ -79,9 +79,12 @@ Middleware gets the authorization code and pass back to Alexa with code & state 
  
 ![Implicit grant with middleware](/assets/oauth/oauth3.png){:class="img-responsive"}
 
-For implicit grant, the first part of getting authorization code is the same as Auth code grant.
+Implicit grant is usually used for getting non-user based token. 
+It will directly use client ID & client secret to generate access token.
 
-After authorization code is returned to middleware from authorization server, 
+As we need to get user based token here, we need to write intermediate server to achieve it.
+
+The first part of getting authorization code is the same as Auth code grant. After authorization code is returned to middleware from authorization server, 
 the middleware will fetch access token directly instead of returning back to Alexa.
 From this stage, the process is:
 
